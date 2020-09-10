@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const template = require('art-template');
 const path = require('path');
 
 //import database
@@ -10,6 +11,11 @@ const loginRouter = require("./router/loginRouter");
 //start static resource service
 const app = express();
 app.use('/www',express.static('public'));
+
+
+app.set('views',path.join(__dirname, 'views'));
+app.set('view engine','art');
+app.engine('art', require('express-art-template'));
 
 
 app.use(bodyParser.urlencoded({extended:false}));
