@@ -6,5 +6,6 @@
 </head>
 <body>
 <div class="title">Main Page<a href="/login">Login Page</a></div>
+<div class="title">Main Page<a href="/article">Article</a></div>
 </body>
 </html>

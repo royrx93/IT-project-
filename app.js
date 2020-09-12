@@ -7,6 +7,7 @@ const path = require('path');
 require("./model");
 const mainPageRouter = require("./router/mainPageRouter");
 const loginRouter = require("./router/loginRouter");
+const articleRouter = require("./router/articleRouter");
 
 //start static resource service
 const app = express();
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/', mainPageRouter);
+app.use('/article',loginRouter);
 app.use('/login',loginRouter);
 
 
