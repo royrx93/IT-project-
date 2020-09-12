@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/', mainPageRouter);
-app.use('/article',loginRouter);
+app.use('/article',articleRouter);
 app.use('/login',loginRouter);
 
 
